@@ -1,0 +1,1 @@
+var site_url = "http://127.0.0.1:8060/mySite/api/v1";

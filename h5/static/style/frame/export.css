@@ -1,0 +1,227 @@
+/* export */
+/* 公用 */
+.public_title h1 {
+    height: 35px;
+    line-height: 35px;
+    background: url(../../../images/enterprise/work_space/title_bg.png) center center repeat-x #255aa3;
+    padding-right: 2px;
+    text-indent: 8px;
+    border: 1px solid #255aa3;
+    border-bottom: 0px;
+}
+
+.public_title h1 span, .public_title h1 a {
+    display: block;
+    height: 29px;
+    line-height: 29px;
+    font-size: 12px;
+    color: #fff;
+    padding: 0px 11px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.public_title h1 span {
+    color: #fff !important;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* 权限 */
+/* 遮罩层 */
+.window_wraper {
+    background: #eee;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    display: none;
+}
+
+/* 权限选择框 */
+.auth_float {
+    background: #656565;
+    position: absolute;
+    z-index: 10;
+    width: 290px;
+    height: 470px;
+    display: none;
+    top: 10px;
+    left: 50%;
+    margin-left: -151px;
+}
+
+.close_but {
+    width: 30px;
+    height: 30px;
+    padding: 0px 0px !important;
+}
+
+.auth_box {
+    position: relative;
+    border-left: 1px solid #255aa3;
+    border-right: 1px solid #255aa3;
+}
+
+.auth_cont {
+    height: 378px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-left: 4px solid #255aa3;
+    border-right: 4px solid #255aa3;
+}
+
+.auth_cont p {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    text-indent: 1em;
+    font-weight: 700;
+}
+
+.single_auth {
+    height: auto;
+    background-color: #fff;
+    padding: 0px 0px;
+}
+
+.line_bg {
+    border-bottom: 1px dotted #494949;
+}
+
+.single_auth ul {
+    width: 280px;
+}
+
+.single_auth li {
+    height: 30px;
+    width: 140px;
+    line-height: 30px;
+    float: left;
+}
+
+.single_auth li span, .single_auth li font {
+    display: block;
+    float: left;
+}
+
+.single_auth li font {
+    color: #333;
+    font-size: 14px;
+}
+
+.single_auth li span {
+    width: 13px;
+    height: 14px;
+    cursor: pointer;
+    margin-top: 9px;
+    margin-right: 6px;
+    margin-left: 6px;
+    background: url(../../../static/images/export/check_bg.png) left 0px no-repeat;
+}
+
+.check_true {
+    background: url(../../../static/images/export/check_bg.png) left -14px no-repeat !important;
+}
+
+.check_false {
+    background: url(../../../static/images/export/check_bg.png) left 0px no-repeat !important;
+}
+
+.selected_auth {
+    height: 68px;
+    background-color: #515151;
+    border-bottom: 1px solid #878787;
+    padding: 0px 10px;
+    line-height: 48px;
+    color: #878787;
+    font-size: 13px;
+    overflow-x: auto;
+}
+
+.selected_single {
+    width: 164px;
+    margin: 0px 3px;
+    margin-top: 4px;
+    padding: 0px 3px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #3B3B3B;
+}
+
+.selected_single font, .selected_single span, .selected_single i {
+    display: block;
+}
+
+.selected_single font, .selected_single i {
+    font-size: 14px;
+    color: #fff;
+    font-style: normal;
+}
+
+.selected_single i {
+    padding: 0px 2px;
+    line-height: 26px;
+}
+
+.selected_single font {
+    width: 125px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+.remove_but {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+.auth_but {
+    height: 56px;
+    background-color: #255aa3;
+    padding-left: 30px;
+}
+
+.auth_but a {
+    width: 100px;
+    height: 39px;
+    line-height: 39px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin: 0px 6px;
+    margin-top: 8px;
+}
+
+.save_but {
+    background-color: #36B75C;
+}
+
+.chanle_but {
+    background-color: #769199;
+}
+
+.point {
+    background: url(../../../images/public/workspace/expirepoint.png);
+    width: 495px;
+    height: 68px;
+}
+
+.point_content {
+    width: 495px;
+    height: 68px;
+    padding-top: 10px;
+    padding-left: 80px;
+    font-size: 15px;
+}

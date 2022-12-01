@@ -1,0 +1,214 @@
+@charset "utf-8";
+.edit_table_line {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    margin: 5px 0px;
+}
+
+.edit_table_line table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 96%;
+    margin: 0px auto;
+    border-top: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+}
+
+.text_algin_r {
+    text-align: right;
+}
+
+.edit_table_line td {
+    padding: 0px;
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    padding: 0px 6px;
+    font-size: 14px;
+    color: #5c84a8;
+}
+
+.edit_table_line td.cloumn_desc {
+    background-color: #EBE9F7;
+    text-align: right;
+}
+
+.edit_table_line td.cloumn_title {
+    background-color: #EBE9F7;
+    text-align: center;
+}
+
+.edit_table_line td span, .edit_table_line td label {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.edit_table_line td span {
+    color: #F00;
+}
+
+.edit_table_line td label {
+    color: #5c84a8;
+    height: 32px;
+    line-height: 32px;
+}
+
+.edit_table_line td .edit_inputs {
+    color: #5c84a8;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    border: 0px;
+    outline: none;
+    padding: 5px 3px !important;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.edit_table_line td .edit_inputs:focus {
+    background: #D6EDFF;
+}
+
+.edit_table_line td .Wdate:focus {
+    background: #D6EDFF url(../../widgets/WdatePicker/skin/datePicker.gif) no-repeat right;
+}
+
+.edit_table_line td .edit_textarea {
+    font-size: 14px;
+    resize: none;
+    color: #5c84a8;
+    margin: 3px 0;
+    line-height: 21px;
+    border: 0px;
+    outline: none;
+    padding: 5px 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.edit_table_line td .edit_textarea:focus {
+    background: #D6EDFF;
+}
+
+.add_inputs {
+    border: 1px solid #666;
+    padding: 3px 1px;
+}
+
+.edit_table_line .combo-arrow {
+    margin-top: 2px;
+}
+
+.edit_table_line td .normal_select {
+    width: 100%;
+}
+
+.normal_select {
+    padding: 0;
+    text-shadow: none;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0px 0px;
+    overflow: hidden;
+    color: #5c84a8;
+    font-size: 14px;
+}
+
+.normal_select:focus {
+    background: #D6EDFF;
+}
+
+.edit_table_line td .edit_area {
+    width: 100%;
+}
+
+/* 弹簧菜单 */
+.shrinkage_menu {
+    width: 96%;
+    border-bottom: 1px solid #E6DFD7;
+}
+
+.shrinkage_t {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #6a839a;
+    border: 1px solid #E6DFD7;
+    border-bottom: 1px solid #fff;
+    text-indent: 1em;
+}
+
+.shrinkage_c {
+    display: none;
+    border-left: 1px solid #E6DFD7;
+    border-right: 1px solid #E6DFD7;
+    padding: 0px 4px;
+    padding-bottom: 6px;
+}
+
+.shrinkage_no_data {
+    line-height: 26px;
+    color: #666;
+}
+
+.shrinkage_border {
+    border-bottom: 1px solid #E6DFD7;
+}
+
+.shrinkage_checked {
+    height: 23px;
+    background-color: #e6e6e6;
+    padding-left: 5px;
+    float: left;
+    width: 145px;
+    margin: 0px 4px;
+    margin-top: 6px;
+}
+
+.shrinkage_checked label, .shrinkage_checked input {
+    display: block;
+    float: left;
+}
+
+.shrinkage_checked label {
+    line-height: 23px;
+    margin-left: 5px;
+    color: #666;
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+.shrinkage_checked input {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.shrinkage_checked_bg {
+    background-color: #f1f1f1 !important;
+}
+
+.shrinkage_c_t6 {
+    padding-top: 6px;
+}
+
+/* 弹簧箭头 */
+.click_this_down {
+    background: url(../../images/frame/list_icon1.png) 99% center no-repeat #E6DFD7 !important;
+}
+
+.hide_this_up {
+    background: url(../../images/frame/list_icon2.png) 99% center no-repeat #E6DFD7 !important;
+}
+
+form {
+    border: 0px solid #88aac9;
+    padding: 5px 0 10px 0;
+}

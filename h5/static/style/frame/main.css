@@ -1,0 +1,243 @@
+/* main css */
+body {
+    padding: 0px;
+}
+
+/* public - styles */
+.ser_border_r {
+    border-right: 1px dotted #6E767B;
+}
+
+.margin_l_5 {
+    margin-left: 5px;
+}
+
+.margin_r_5 {
+    margin-right: 5px;
+}
+
+.margin_t_8 {
+    margin-top: 8px;
+}
+
+/* 功能菜单 增|删|改|查 */
+.func_line_c {
+    width: 100%;
+}
+
+.func_line {
+    clear: both;
+    background: url(../../images/frame_top/tile_bg.jpg) left top repeat-x #C0C9CE;
+    padding: 5.5px 10px;
+    border-top: 1px solid #ECEEEC;
+    border-bottom: 1px solid #A3B2B8;
+}
+
+.func_but_top a {
+    display: inline-block;
+    width: auto;
+    height: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 23px;
+    float: left;
+    text-align: center;
+}
+
+/* curd */
+.but_curd {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border-left: 1px solid #6E767B;
+    border-right: 1px solid #6E767B;
+}
+
+.but_curd li {
+    float: left;
+    height: 23px;
+    background: url(../../images/frame_top/but_bg.gif) 0px -50px repeat-x;
+    border-top: 1px solid #6B7479;
+    border-bottom: 1px solid #6B7479;
+}
+
+.but_curd li a {
+    text-indent: 8px;
+    height: 23px;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+}
+
+.but_curd li a:hover {
+    background-color: #E3E8EA;
+}
+
+.search_icon {
+    background-image: url(../../images/frame_top/search.png);
+}
+
+.add_icon {
+    background-image: url(../../images/frame_top/+.png);
+}
+
+.edit_icon {
+    background-image: url(../../images/frame_top/pen.png);
+}
+
+.dele_icon {
+    background-image: url(../../images/frame_top/_.png);
+}
+
+.no_icon {
+    text-indent: 0px !important;
+}
+
+/* 启用 | 停用 */
+.but_open {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border-left: 1px solid #949FAE;
+    border-right: 1px solid #949FAE;
+}
+
+.but_open a {
+    background: url(../../images/frame_top/but_bg.gif) 0px 0px repeat-x;
+    color: #fff;
+}
+
+.but_open a:hover {
+    background: url(../../images/frame_top/but_bg.gif) 0px -25px repeat-x;
+}
+
+.open_icon {
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.closed_icon_but {
+    -moz-border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.search_icon {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* 搜索框 */
+.public_input {
+    height: 12px;
+    height: 13px;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 5px 5px;
+    background-color: #fff;
+    color: #A8A8A8;
+    border: 1px solid #989898;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* edit */
+.edit_table_line {
+    width: 100%;
+    height: 800px;
+    background-color: #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.edit_table_line table {
+    margin: 0px auto;
+    width: 99%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.edit_table_line tr {
+    margin-top: 10px;
+    height: 32px;
+    line-height: 32px;
+    border-top: 8px solid #F1F1F1;
+    border-bottom: 8px solid #F1F1F1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.edit_table_border {
+    width: 99%;
+    height: 32%;
+    border: 1px solid #d1d1d1;
+    padding: 0px 0.5%;
+    background-color: #fff;
+}
+
+.edit_table_line td span, .edit_table_line td label {
+    display: block;
+    height: 34px;
+    padding: 0px 2px;
+    line-height: 34px;
+    float: left;
+}
+
+.edit_table_line td span {
+    color: #F0A423;
+}
+
+.edit_table_line td label {
+    color: #575757;
+}
+
+.edit_table_line td input {
+    float: left;
+    font-size: 12px;
+    color: #666;
+    margin-top: 11px;
+    margin-left: 3px;
+    border: 0px;
+    outline: none;
+}
+
+.fade_style {
+    position: absolute;
+    z-index: 9000;
+    top: 50%;
+    left: 50%;
+    background-color: #F0C56E;
+    width: auto;
+    height: auto;
+    border: 5px solid #DD4C41;
+    padding: 4px;
+    display: none;
+}
+
+/* listFrame */
+.listFrame {
+    margin-top: 2px;
+}
+
+/*图例*/
+.tip_block {
+    margin-top: -29px;
+}
+
+.tip_block i {
+    width: 15px;
+    height: 15px;
+    margin: 5px 6px 0px 12px;
+}
+
+.tip_block label {
+    margin-top: 4px;
+}
+
+.tip_block i, .tip_block label {
+    display: block;
+    float: left;
+}

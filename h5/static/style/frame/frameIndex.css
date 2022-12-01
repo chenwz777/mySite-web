@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+body {
+    min-width: 1000px;
+    overflow-x: hidden;
+    background: #eceff6;
+    font-weight: lighter;
+}
+
+/*用户头像*/
+.userName{position:fixed;z-index:99; top:0;left:0;width:260px;height:145px;
+    background:#fff;box-shadow:0 1px 0 0 #eee;}
+.userName ul{position:absolute;top:0;box-shadow:0 1px 0 0 #eee;
+    width:100%;height:30px; line-height:30px;}
+.userName ul span{color:#888; font-size:14px;
+    display:block;float:left;width:180px;overflow:hidden;
+    white-space:nowrap;text-overflow:ellipsis;
+    margin-left:15px;}
+.userName ul li{width:30px;height:30px;float:right;
+    box-shadow:1px 0 0 0 #ddd inset;font-size:16px;color:#aaa;
+    text-align:center;}
+.userName ul li:hover{background:#555;color:#fff;}
+.userName img{display:block;margin:45px auto 0px;}
+
+/*菜单*/
+.frame-left {
+    width: 260px;
+}
+
+.nav *{transition:0.5s;}
+.nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:260px;
+    height:100%;
+    z-index:98;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    background:#fff;
+    box-shadow:1px 0 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+}
+
+.nav::-webkit-scrollbar {
+    width: 8px;
+    background: #fff;
+}
+
+.nav::-webkit-scrollbar-thumb {
+    background: #e5d9cd;
+    border-radius: 0;
+    box-shadow:0 0 0 2px #fff inset;
+}
+
+.nav::-webkit-scrollbar-thumb:hover{background: #cec0b3;}
+
+.nav ul:first-child {
+    margin: 148px auto 0px;
+}
+
+
+.nav ul{overflow:hidden;background:#fff;}
+.nav ul input{display:none;}
+.nav ul>label{padding:20px 15px 20px 60px;display:block;position:relative;
+    box-shadow:0 -1px 0 rgba(0, 0, 0, 0.07) inset;color:#575757;}
+.nav ul>label i{display:block;position:absolute;
+    width:30px;height:30px; top:15px;left:15px; text-align:center;
+    line-height:30px;font-size:20px;border-radius:4px;
+    background:#fff;color:#e9892d;box-shadow:0 0 0 1px rgba(0, 0, 0, 0.1) inset;}
+.nav ul>input:checked ~ label{ transition:0s;
+    background:url(../../images/frame/nav2.png) no-repeat 25px 25px  #fff;}
+.nav ul>input:checked ~ label>i{
+    box-shadow:0 0 0 1px rgba(0, 0, 0, 0.5) inset;}
+.nav ul>label b{font-weight:lighter;position:absolute;
+    font-size:20px;right:25px;top:18px;}
+.nav ul input:checked ~ label b{transform:rotateZ(90deg);}
+.nav ul li{overflow:hidden;background:#ebe9f7;
+    min-height:0px;height:0px;}
+.nav ul input:checked ~ li{height:auto;min-height:60px;
+    animation: nav 0.5s;}
+@keyframes nav {0%{margin-bottom:-60px;}}
+.nav ul li>label{display:block;padding:20px 15px 20px 65px;
+    overflow:hidden;position:relative;
+    background:url(../../images/frame/nav4.png) no-repeat 25px center;}
+.nav ul li>label i{left:43px;top:21px; position:absolute;}
+.nav ul li span{display:block;overflow:hidden;padding:0px 15px 0px 60px;height:0px;min-height:0px;
+    background:url(../../images/frame/nav2.png) no-repeat 25px center;}
+.nav ul li input:checked ~ span{padding:15px 15px 15px 90px;color:#a06124;height:auto;min-height:20px;}
+.nav ul li input:checked ~ label i{transform:rotateX(-180deg);}
+.nav ul li span i{margin-right:5px;}
+.nav ul li span:hover{background:url(../../images/frame/nav2.png) no-repeat 25px center #fff;
+    box-shadow:0 0 0 rgba(0, 0, 0, 0) inset !important;}
+.nav ul>label,.nav ul li>label,.nav ul li span,.userName ul li{user-select:none;cursor:pointer;}
+
+.nav.menu-list .loading {
+    color: #fff;
+    margin: 10px;
+    display: block;
+}
+
+/*tab页样式*/
+#tabs .tabs-header {
+    height: 60px;
+    padding-top: 0px;
+    border: none;
+}
+
+#tabs .tabs-header, .tabs-tool {
+    background: #e9892d;
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+#tabs .tabs-panels {
+    border: none;
+}
+
+#tabs .tabs {
+    height: 60px !important;
+    padding-left: 0px;
+}
+
+#tabs .tabs-inner {
+    height: 60px !important;
+    border: none;
+    min-width: 128px;
+    background: transparent;
+    margin-right: 0px;
+}
+
+#tabs .tabs li.tabs-selected a.tabs-inner {
+    border: none;
+    font-weight: normal;
+    background: url(../../images/frame/tabs_select.png) no-repeat center 51px #f79332;
+}
+
+#tabs .tabs li {
+    margin: 0 1px -1px 0;
+    box-shadow: -1px 0 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+#tabs .tabs li.tabs-selected .tabs-title {
+    color: #fff;
+}
+
+#tabs .tabs-title {
+    color: #fff;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#tabs .tabs li a.tabs-close {
+    background: url(../../images/frame/tabs_icons.png) no-repeat -32px center;
+    width: 14px;
+    height: 14px;
+}
+
+#tabs .tabs-scroller-left {
+    background: url(../../images/frame/tabs_icons.png) no-repeat 1px center #DADADA;
+    border: 0;
+}
+
+#tabs .tabs-scroller-right {
+    background: url(../../images/frame/tabs_icons.png) no-repeat -13px center #DADADA;
+    border: 0;
+}

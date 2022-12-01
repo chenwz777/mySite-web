@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/* basic-css */
+/* 基本元素重置 */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body, html {
+    font-size: 16px;
+    font-family: "微软雅黑", "黑体", "宋体", Arial, Helvetica, sans-serif, iconfont;
+    color: #000;
+    overflow: visible;
+}
+
+img {
+    border: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #404242;
+    outline: none;
+}
+
+div {
+    margin: 0px auto;
+}
+
+li, dl, dt, dd {
+    list-style-type: none;
+}
+
+input, textarea, select, option, em, h1, h2, h3, h4, h4, h6, strong, span, li, dl, dt, td, i, a {
+    font-family: "微软雅黑", "黑体", "宋体", Arial, Helvetica, sans-serif, iconfont
+}
+
+i {
+    font-style: normal;
+}
+
+input {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, em {
+    font-style: normal;
+    font-weight: 400;
+}
+
+button {
+    cursor: pointer;
+    outline: medium;
+}
+
+/* 重用自定义样式 */
+.f_l {
+    float: left !important;
+}
+
+.f_r {
+    float: right !important;
+}
+
+.clear_both {
+    clear: both !important;
+}
+
+.f_n {
+    float: none !important;
+}
+
+/* clear */
+.no_margin {
+    margin: 0px !important;
+}
+
+.no_padding {
+    padding: 0px !important;
+}
+
+.no_border {
+    border: 0px !important;
+}
+
+.no_bg {
+    background: none !important;
+}
+
+.no_r_border {
+    border-right: 0 !important;
+}
+
+/* mouse */
+.pointer {
+    cursor: pointer;
+}
+
+.move {
+    cursor: move;
+}
+
+/* absolute */
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.static {
+    position: static;
+}
+
+/* show */
+.display {
+    display: block !important;
+}
+
+.display_inline {
+    display: inline-block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+._show_v {
+    visibility: hidden !important;
+}
+
+._show_s {
+    visibility: visible !important;
+}
+
+/* width */
+.w_100 {
+    width: 100%;
+}
+
+.w_95 {
+    width: 95%;
+}
+
+.w_98 {
+    width: 98%;
+}
+
+.w_30 {
+    width: 30%;
+}
+
+.w_min_width {
+    min-width: 1000px;
+}
+
+/* padding */
+.padding_2 {
+    padding-top: 2px;
+}
+
+.padding_3 {
+    padding: 3px;
+}
+
+.padding_6 {
+    padding: 6px;
+}
+
+.padding_60 {
+    padding: 6px 0px;
+}
+
+.padding_t10 {
+    padding-top: 10px;
+}
+
+/* margin */
+.margin_6 {
+    margin: 6px;
+}
+
+.margin_l5 {
+    margin-left: 8px;
+}
+
+.margin_t8 {
+    margin-top: 8px;
+}
+
+.margin_r10 {
+    margin-right: 10px;
+}
+
+/* font */
+.text_over {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+.break {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.no_break {
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+.text_indent0 {
+    text-indent: 0em;
+}
+
+.text_indent2 {
+    text-indent: 2em;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+/* text-align */
+.t_l {
+    text-align: left !important;
+}
+
+.t_r {
+    text-align: right !important;
+}
+
+.t_c {
+    text-align: center !important;
+}
+
+.t_j {
+    text-align: justify !important;
+}
+
+.t_b {
+    font-weight: 700;
+}
+
+/*flex*/
+.flex {
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */
+    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;       /* OLD - Firefox 19- */
+    -webkit-flex: 1;        /* Chrome */
+    -ms-flex: 1;            /* IE 10 */
+    flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* 侧轴居中 */
+.flex-cCenter {
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* loading */
+.tab_frame {
+    position: relative;
+}
+
+.wraper_full {
+    position: fixed;
+    z-index: 9998;
+    top: 0px;
+    left: 0px;
+    background-color: #ABADB3;
+    display: none;
+}
+
+.loading_img {
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+/*dialog*/
+.dialog-waiting {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -10px;
+    width: 80px;
+    height: 20px;
+    z-index: 9999;
+}
+
+.a_link {
+    color: #0000EE;
+}
+
+.no-copy {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.animation {
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.Wdate {
+    background: #fff url(../../images/wdate/datePicker.png) no-repeat right !important;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot');
+    src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../iconfont/iconfont.woff2') format('woff2'),
+    url('../iconfont/iconfont.woff') format('woff'),
+    url('../iconfont/iconfont.ttf') format('truetype'),
+    url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9bb2d0;
+}
+
+::selection {
+    background: #aaa;
+    color: #fff;
+}
+
+::-ms-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+}
+
+::-ms-scrollbar-thumb {
+    background: #9bb2d0;
+}
+
+::-moz-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+}
+
+::-moz-scrollbar-thumb {
+    background: #9bb2d0;
+}
+
+/*图例*/
+.tip_block {
+    display:inline-block;
+    margin-left: 20px;
+    height: 12px;
+}
+
+.tip_block i {
+    width:16px;
+    height:16px;
+    margin:0px 6px 0px 12px;
+}
+
+.tip_block i,.tip_block label {
+    font-size:14px;
+    display:block;
+    float:left;
+    line-height: 16px;
+    height: 16px;
+}

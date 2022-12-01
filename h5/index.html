@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 禁止缓存 headers -->
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <!-- end 禁止缓存 headers -->
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="static/style/frame/basic.css"/>
+    <link rel="stylesheet" type="text/css" href="static/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/icon.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="static/css/demo.css" />-->
+    <script type="text/javascript" src="static/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.easyui.min.js"></script>
+    <!--<script type="text/javascript" src="static/js/waiting.js"></script>-->
+    <script type="text/javascript" src="static/js/global.js"></script>
+    <script type="text/javascript" src="static/scripts/crud.js"></script>
+    <script type="text/javascript" src="static/scripts/util.js"></script>
+    <script type="text/javascript" src="static/scripts/common.js"></script>
+</head>
+<body onload="init()">
+<!--<table class="easyui-datagrid" title="Aligning Columns in DataGrid" style="width:700px;height:250px"-->
+<!--data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th data-options="field:'itemid',width:80,halign:'center'">Item ID</th>-->
+<!--<th data-options="field:'productid',width:100,halign:'center'">Product</th>-->
+<!--<th data-options="field:'listprice',width:80,align:'right',halign:'center'">List Price</th>-->
+<!--<th data-options="field:'unitcost',width:80,align:'right',halign:'center'">Unit Cost</th>-->
+<!--<th data-options="field:'attr1',width:250,halign:'center'">Attribute</th>-->
+<!--<th data-options="field:'status',width:60,align:'center',halign:'center'">Status</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--</table>-->
+<p>
+    <label>是否有效：</label><input id="queryLegal" name="legal" >
+
+<table id="DataGridInbound"></table>
+
+</p>
+</body>
+<script type="text/javascript">
+    var headers = {};
+    $(function () {
+        $('#queryLegal').combobox({
+            data:[
+                {"id":1,"text":"有效"},
+                {"id":2,"text":"无效"},
+                {"id":-1,"text":"全部"}],
+            height: 0,
+            valueField:'id',
+            textField:'text',
+            panelHeight:'auto' //自适应高度
+        });
+        $('#queryLegal').combobox("setValue","-1");
+
+        executeAjaxGet(site_url + "/home/getBall", {number: 5}, function (data) {
+            console.log(data.data)
+            $("#DataGridInbound").datagrid({
+                title: '列表',
+                idField: 'Id',
+                rownumbers: 'true',
+                pagination: false,//表示在datagrid设置分页
+                rownumbers: true,
+                singleSelect: false,
+                striped: true,
+                nowrap: true,
+                collapsible: true,
+                fitColumns: true,
+                remoteSort: false,
+                data: data.data,
+                loadMsg: "正在努力加载数据，请稍后...",
+                queryParams: {ProductName: "", Status: "", SqNo: ""},
+                onLoadSuccess: function (data) {
+
+                },
+                columns: [[
+                    {field: 'ck', checkbox: true},
+                    {field: 'Id', hidden: 'true'},
+                    {field: 'redList', title: '红球', width: '200', align: 'center', sortable: false,
+                        formatter:function (value) {
+                            var str = '';
+                            for(var i in value){
+                                var item = value[i];
+                                if(item > 9){
+                                    str += ' '+item;
+                                } else {
+                                    str += ' 0'+item;
+                                }
+                            }
+                            return str;
+                        }},
+                    {
+                        field: 'blue', title: '蓝球', width: '100', align: 'center', sortable: false,
+                        formatter: function (value) {
+                            return value > 9 ? value : '0' + value;
+                        }
+                    },
+                    {
+                        field: 'isLegal', title: '是否有效', width: '100', align: 'center', sortable: false,
+                        formatter: function (value, index, row) {
+                            return value ? '<span style="color:green;">有效</span>' : '<span style="color:red;">无效</span>';
+                        }
+                    },
+                    {field: 'type', title: '生成方式', width: '100', align: 'center', sortable: false,
+                        formatter:function (value) {
+                            return value == "1"? "random" : "shuffle";
+                        }},
+                    {field: 'message', title: '校验结果', width: '300', align: 'left', sortable: false},
+                ]],
+            });
+        });
+
+    })
+
+    function init() {}
+
+
+
+</script>
+</html>
