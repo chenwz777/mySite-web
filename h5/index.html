@@ -25,19 +25,6 @@
     <script type="text/javascript" src="static/scripts/common.js"></script>
 </head>
 <body onload="init()">
-<!--<table class="easyui-datagrid" title="Aligning Columns in DataGrid" style="width:700px;height:250px"-->
-<!--data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">-->
-<!--<thead>-->
-<!--<tr>-->
-<!--<th data-options="field:'itemid',width:80,halign:'center'">Item ID</th>-->
-<!--<th data-options="field:'productid',width:100,halign:'center'">Product</th>-->
-<!--<th data-options="field:'listprice',width:80,align:'right',halign:'center'">List Price</th>-->
-<!--<th data-options="field:'unitcost',width:80,align:'right',halign:'center'">Unit Cost</th>-->
-<!--<th data-options="field:'attr1',width:250,halign:'center'">Attribute</th>-->
-<!--<th data-options="field:'status',width:60,align:'center',halign:'center'">Status</th>-->
-<!--</tr>-->
-<!--</thead>-->
-<!--</table>-->
 <p>
     <label>是否有效：</label><input id="queryLegal" name="legal" >
 
@@ -60,25 +47,40 @@
         });
         $('#queryLegal').combobox("setValue","-1");
 
-        executeAjaxGet(site_url + "/home/getBall", {number: 5}, function (data) {
-            console.log(data.data)
-            $("#DataGridInbound").datagrid({
+
+        // executeAjaxGet(site_url + "/home/getBall", {number: 5}, function (data) {
+        //     console.log(data.data)
+            
+        // });
+
+            
+        $("#DataGridInbound").datagrid({
                 title: '列表',
                 idField: 'Id',
                 rownumbers: 'true',
-                pagination: false,//表示在datagrid设置分页
-                rownumbers: true,
+                pagination: true, //表示在datagrid设置分页
+                rownumbers: true, 
                 singleSelect: false,
                 striped: true,
                 nowrap: true,
+                method: "get",
+                url: site_url + "/home/getBall",
                 collapsible: true,
                 fitColumns: true,
-                remoteSort: false,
-                data: data.data,
+                remoteSort: true,  //通过后台接口排序
+                // data: data.data,
                 loadMsg: "正在努力加载数据，请稍后...",
                 queryParams: {ProductName: "", Status: "", SqNo: ""},
                 onLoadSuccess: function (data) {
-
+                    console.log("数据加载成功");
+                },
+                loadFilter: function(data){  //对响应参数进行处理
+                    console.log(data)
+                    if(data.code == 0){
+                        console.log("接口请求成功！")
+                    }
+                    data = data.data;
+                    return data ;
                 },
                 columns: [[
                     {field: 'ck', checkbox: true},
@@ -103,7 +105,7 @@
                         }
                     },
                     {
-                        field: 'isLegal', title: '是否有效', width: '100', align: 'center', sortable: false,
+                        field: 'isLegal', title: '是否有效', width: '100', align: 'center', sortable: true,
                         formatter: function (value, index, row) {
                             return value ? '<span style="color:green;">有效</span>' : '<span style="color:red;">无效</span>';
                         }
@@ -114,8 +116,14 @@
                         }},
                     {field: 'message', title: '校验结果', width: '300', align: 'left', sortable: false},
                 ]],
+            })
+            .datagrid('getPager').pagination({
+                displayMsg:"总共{total}条记录",
+                beforePageText:"第",
+                afterPageText:"页"
             });
-        });
+
+        
 
     })
 
